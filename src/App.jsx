@@ -55,7 +55,7 @@ export default function Page() {
           </div>
           <div className="hero-reference-visual relative order-last min-h-72 overflow-hidden lg:absolute lg:inset-y-0 lg:right-[-9%] lg:z-0 lg:min-h-0 lg:w-[56%]">
             <video className="hero-reference-video absolute inset-0 z-0 h-full w-full object-cover opacity-90" autoPlay muted loop playsInline aria-hidden="true" poster="/brand/baltic-tech-logo.png">
-              <source src="/Video%20Project%208.mp4" type="video/mp4" />
+              <source src="/video-project-8.mp4" type="video/mp4" />
             </video>
             <div className="pointer-events-none absolute inset-0 z-10 bg-linear-to-t from-[#030612]/60 via-transparent to-blue-950/10 lg:bg-linear-to-r lg:from-[#030612] lg:via-[#030612]/20 lg:to-transparent" />
           </div>
@@ -102,7 +102,7 @@ export default function Page() {
 
       <section className="get-started" id="get-started"><div className="section-label">09 / GET STARTED</div><div className="get-started-content"><div> <h2>Your Crypto &amp; AI Vision <em>Starts Here</em></h2></div><div><p>Partner with Baltic Tech to build, launch, and scale your next crypto, blockchain, or AI project. Tell us your idea and our team will help turn it into a secure, intelligent, market-ready product.</p><div className="get-started-actions"><a className="button button-primary" href="#contact">Start Your Project <ArrowUpRight size={17} /></a><a className="button button-ghost" href="#contact">Talk to Our Team <ArrowUpRight size={17} /></a></div></div></div></section>
 
-      <footer className="footer"><video className="footer-video" autoPlay muted loop playsInline aria-hidden="true"><source src="/Video%20Project%2010.mp4" type="video/mp4" /></video><div className="footer-top"><div><img src="/brand/baltic-tech-logo.png" alt="Baltic Tech" width="210" height="54" /><p>Building the technology behind the future of crypto & AI.</p></div><div className="footer-links"><div><span>EXPLORE</span><a href="#services">Services</a><a href="#solutions">Solutions</a><a href="#about">About us</a><a href="#faq">FAQ</a></div><div><span>CONNECT</span><a href="#contact">Start a project</a><a href="#contact">LinkedIn</a><a href="#contact">X / Twitter</a><a href="#contact">GitHub</a></div></div></div><div className="footer-bottom"><span>© 2026 Baltic Tech Pvt. Ltd. All rights reserved.</span><span>Privacy policy &nbsp; / &nbsp; Terms</span><span>Designed with intent.</span></div></footer>
+      <footer className="footer"><video className="footer-video" autoPlay muted loop playsInline aria-hidden="true"><source src="/video-project-10.mp4" type="video/mp4" /></video><div className="footer-top"><div><img src="/brand/baltic-tech-logo.png" alt="Baltic Tech" width="210" height="54" /><p>Building the technology behind the future of crypto & AI.</p></div><div className="footer-links"><div><span>EXPLORE</span><a href="#services">Services</a><a href="#solutions">Solutions</a><a href="#about">About us</a><a href="#faq">FAQ</a></div><div><span>CONNECT</span><a href="#contact">Start a project</a><a href="#contact">LinkedIn</a><a href="#contact">X / Twitter</a><a href="#contact">GitHub</a></div></div></div><div className="footer-bottom"><span>© 2026 Baltic Tech Pvt. Ltd. All rights reserved.</span><span>Privacy policy &nbsp; / &nbsp; Terms</span><span>Designed with intent.</span></div></footer>
     </main>
   )
 }
