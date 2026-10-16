@@ -38,7 +38,7 @@ export default function Page() {
     <main>
       <header className="absolute inset-x-0 top-0 z-20 flex items-center justify-between px-6 py-6 text-white sm:px-10 lg:px-20">
         <a href="#top" className="brand" aria-label="Baltic Tech home"><img className="h-auto w-36 object-contain sm:w-44" src="/brand/baltic-tech-logo.png" alt="Baltic Tech" width="180" height="46" /></a>
-        <nav className={`reference-nav absolute left-5 right-5 top-20 flex-col gap-0 rounded-2xl border border-white/15 bg-[#080c24]/95 p-3 backdrop-blur-xl sm:left-auto sm:right-10 sm:top-24 lg:static lg:flex lg:flex-row lg:items-center lg:gap-8 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:backdrop-blur-none ${menuOpen ? 'flex' : 'hidden'}`}>
+        <nav className={`reference-nav absolute left-5 right-5 top-20 flex-col gap-0 rounded-2xl border border-white/15 bg-[#080c24]/95 p-3 backdrop-blur-xl sm:left-auto sm:right-10 sm:top-24 lg:static lg:flex lg:flex-row lg:items-center lg:gap-8 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:backdrop-blur-none ${menuOpen ? 'is-open' : ''}`}>
           {['Services', 'Solutions', 'About', 'FAQ'].map((item) => <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setMenuOpen(false)}>{item}</a>)}
           <a className="nav-cta inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-3" href="#contact" onClick={() => setMenuOpen(false)}>Start a project <ArrowUpRight size={15} /></a>
         </nav>
