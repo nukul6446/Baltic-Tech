@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { ArrowUpRight, Menu, X, ChevronDown, ShieldCheck, BrainCircuit, Scaling, Sparkles } from 'lucide-react'
+import Particles from './Particles'
 
 const services = [
   ['01', 'Crypto Exchange Development', 'Powerful cryptocurrency trading platforms with secure matching engines, order books, liquidity integration, and AI-assisted risk monitoring.'],
@@ -47,18 +48,58 @@ export default function Page() {
 
       <section className="hero-reference relative isolate min-h-190 overflow-hidden bg-[#030612] px-6 pb-14 pt-36 text-white sm:px-10 lg:min-h-svh lg:px-16 lg:py-32" id="top">
         <div className="hero-reference-glow pointer-events-none absolute -right-32 top-24 -z-10 h-135 w-135 rounded-full bg-blue-600/35 blur-[90px] sm:right-0 lg:h-175 lg:w-175" />
+        <div className="hero-particles pointer-events-auto absolute inset-0 z-0" aria-hidden="true">
+          <Particles
+            particleColors={['#ffffff', '#ffffff', '#ffffff']}
+            particleCount={200}
+            particleSpread={10}
+            speed={0.1}
+            particleBaseSize={100}
+            glow={0.5}
+            twinkle={0.3}
+            moveParticlesOnHover
+            hoverEffect="parallax"
+            sizeRandomness={1}
+            shape="circle"
+            depthOfField={0}
+            connections={false}
+            connectionDistance={110}
+            particleHoverFactor={1}
+            hoverRadius={140}
+            drift="none"
+            driftSpeed={1}
+            alphaParticles={false}
+            disableRotation={false}
+            cameraDistance={20}
+            variation={0}
+            opacity={1}
+            clickBurst
+            intro
+            lightMode={false}
+          />
+        </div>
         <div className="relative z-10 mx-auto grid w-full max-w-[1600px] items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,.8fr)] lg:gap-10">
           <div className="relative z-20 lg:-translate-x-6 lg:pr-12">
             <div className="hero-reference-eyebrow lens-target mb-7 text-[11px] font-bold uppercase tracking-[.22em] text-blue-200 sm:text-sm">BALTIC TECH PVT. LTD. <span className="mx-3 text-white/40">—</span> Your complete crypto & AI technology partner</div>
             <h1 className="hero-reference-title max-w-3xl text-[clamp(3.5rem,6.4vw,6.8rem)] font-semibold leading-[.92] tracking-[-.07em] text-white"><span className="block whitespace-nowrap">Building technology</span><span className="block whitespace-nowrap">for a smarter</span><em className="block whitespace-nowrap text-blue-500 not-italic">crypto future.</em></h1>
             <div className="mt-10 max-w-lg sm:mt-12"><p className="text-base leading-7 text-slate-200 sm:text-lg">Innovative software solutions for the next generation of blockchain and digital finance.</p><div className="mt-7 flex flex-wrap gap-3"><a className="inline-flex items-center gap-4 rounded-full bg-blue-600 px-6 py-4 text-xs font-bold uppercase tracking-[.12em] text-white transition hover:-translate-y-1 hover:bg-blue-500" href="#services">Explore Services <ArrowUpRight size={18} /></a><a className="inline-flex items-center gap-4 rounded-full border border-white/35 px-6 py-4 text-xs font-bold uppercase tracking-[.12em] text-white transition hover:-translate-y-1 hover:bg-white/10" href="#contact">Get Started <ArrowUpRight size={18} /></a></div></div>
           </div>
-          <div className="hero-reference-visual relative order-last min-h-72 overflow-hidden lg:absolute lg:inset-y-0 lg:right-[-9%] lg:z-0 lg:min-h-0 lg:w-[56%]">
-            <video className="hero-reference-video absolute inset-0 z-0 h-full w-full object-cover opacity-90" autoPlay muted loop playsInline aria-hidden="true" poster="/brand/baltic-tech-logo.png">
-              <source src="/video-project-8.mp4" type="video/mp4" />
-            </video>
-            <div className="pointer-events-none absolute inset-0 z-10 bg-linear-to-t from-[#030612]/60 via-transparent to-blue-950/10 lg:bg-linear-to-r lg:from-[#030612] lg:via-[#030612]/20 lg:to-transparent" />
-          </div>
+         <div className="hero-reference-visual relative order-last min-h-72 overflow-hidden border-0 outline-none ring-0 lg:absolute lg:inset-y-0 lg:right-[-8%] lg:z-0 lg:min-h-0 lg:w-[56%]">
+  <video
+    className="hero-reference-video absolute inset-0 z-0 block h-full w-full border-0 outline-none ring-0 object-cover opacity-90"
+    autoPlay
+    muted
+    loop
+    playsInline
+    aria-hidden="true"
+    poster="/brand/baltic-tech-logo.png"
+  >
+    <source src="/video-project-8.mp4" type="video/mp4" />
+  </video>
+
+  {/* Gradient overlay — no border */}
+  <div className="pointer-events-none absolute inset-0 z-10 bg-linear-to-t from-[#030612]/60 via-transparent to-blue-950/10 lg:bg-linear-to-r lg:from-[#030612] lg:via-[#030612]/20 lg:to-transparent" />
+</div>
           <div className="relative mt-1 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4 lg:col-span-2 lg:mt-4 lg:max-w-6xl">
             {[[ShieldCheck, 'Secure by Design'], [BrainCircuit, 'AI-Powered'], [Scaling, 'Scalable Architecture'], [Sparkles, 'Future-Ready']].map(([Icon, label]) => <span className="lens-target flex min-h-18 items-center gap-3 rounded-lg border border-blue-300/25 bg-[#071330]/75 px-3 py-3 text-[11px] font-semibold uppercase leading-tight tracking-[.08em] text-blue-50 backdrop-blur-md sm:px-4 sm:text-xs" key={label}><Icon className="shrink-0 text-blue-500" size={21} />{label}</span>)}
           </div>
