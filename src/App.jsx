@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { ArrowUpRight, Menu, X, ChevronDown, ShieldCheck, BrainCircuit, Scaling, Sparkles } from 'lucide-react'
-import Particles from './Particles'
 
 const services = [
   ['01', 'Crypto Exchange Development', 'Powerful cryptocurrency trading platforms with secure matching engines, order books, liquidity integration, and AI-assisted risk monitoring.'],
@@ -47,78 +46,42 @@ export default function Page() {
       </header>
 
       <section className="hero-reference relative isolate min-h-190 overflow-hidden bg-[#030612] px-6 pb-14 pt-36 text-white sm:px-10 lg:min-h-svh lg:px-16 lg:py-32" id="top">
-        <div className="hero-reference-glow pointer-events-none absolute -right-32 top-24 -z-10 h-135 w-135 rounded-full bg-blue-600/35 blur-[90px] sm:right-0 lg:h-175 lg:w-175" />
-        <div className="hero-particles pointer-events-none absolute inset-0 z-0" aria-hidden="true">
-          <Particles
-            particleColors={['#ffffff', '#ffffff', '#ffffff']}
-            particleCount={200}
-            particleSpread={10}
-            speed={0.1}
-            particleBaseSize={100}
-            glow={0.5}
-            twinkle={0.3}
-            moveParticlesOnHover
-            hoverEffect="parallax"
-            sizeRandomness={1}
-            shape="circle"
-            depthOfField={0}
-            connections={false}
-            connectionDistance={110}
-            particleHoverFactor={1}
-            hoverRadius={140}
-            drift="none"
-            driftSpeed={1}
-            alphaParticles={false}
-            disableRotation={false}
-            cameraDistance={20}
-            variation={0}
-            opacity={1}
-            clickBurst
-            intro
-            lightMode={false}
-          />
-        </div>
-        <div className="relative z-10 mx-auto grid w-full max-w-[1600px] items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,.8fr)] lg:gap-10">
-          <div className="relative z-20 lg:-translate-x-6 lg:pr-12">
+        <video
+          className="hero-reference-background absolute inset-0 z-[-3] h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
+          poster="/brand/baltic-tech-logo.png"
+        >
+          <source src="/video-project-8.mp4" type="video/mp4" />
+        </video>
+        <div className="hero-inner">
+          <div className="hero-copy">
             <div className="hero-reference-eyebrow lens-target mb-7 text-[11px] font-bold uppercase tracking-[.22em] text-blue-200 sm:text-sm">BALTIC TECH PVT. LTD. <span className="mx-3 text-white/40">—</span> Your complete crypto & AI technology partner</div>
-            <h1 className="hero-reference-title max-w-3xl text-[clamp(3.5rem,6.4vw,6.8rem)] font-semibold leading-[.92] tracking-[-.07em] text-white"><span className="block whitespace-nowrap">Building technology</span><span className="block whitespace-nowrap">for a smarter</span><em className="block whitespace-nowrap text-blue-500 not-italic">crypto future.</em></h1>
-            <div className="mt-10 max-w-lg sm:mt-12"><p className="text-base leading-7 text-slate-200 sm:text-lg">Innovative software solutions for the next generation of blockchain and digital finance.</p><div className="mt-7 flex flex-wrap gap-3"><a className="inline-flex items-center gap-4 rounded-full bg-blue-600 px-6 py-4 text-xs font-bold uppercase tracking-[.12em] text-white transition hover:-translate-y-1 hover:bg-blue-500" href="#services">Explore Services <ArrowUpRight size={18} /></a><a className="inline-flex items-center gap-4 rounded-full border border-white/35 px-6 py-4 text-xs font-bold uppercase tracking-[.12em] text-white transition hover:-translate-y-1 hover:bg-white/10" href="#contact">Get Started <ArrowUpRight size={18} /></a></div></div>
+            <h1 className="hero-reference-title"><span className="title-line">Building technology</span><span className="title-line">for a smarter</span><em className="title-line">crypto future.</em></h1>
+            <div className="hero-sub"><p>Innovative software solutions for the next generation of blockchain and digital finance.</p><div className="hero-actions"><a className="cta-button inline-flex items-center gap-4 rounded-full bg-white px-6 py-4 text-xs font-bold uppercase tracking-[.12em] text-[#030612] transition hover:-translate-y-1 hover:bg-blue-50" href="#services">Explore Services <ArrowUpRight size={18} /></a><a className="cta-button inline-flex items-center gap-4 rounded-full bg-white px-6 py-4 text-xs font-bold uppercase tracking-[.12em] text-[#030612] transition hover:-translate-y-1 hover:bg-blue-50" href="#contact">Get Started <ArrowUpRight size={18} /></a></div></div>
           </div>
-         <div className="hero-reference-visual relative order-last min-h-72 overflow-hidden border-0 outline-none ring-0 lg:absolute lg:inset-y-0 lg:right-[-8%] lg:z-0 lg:min-h-0 lg:w-[56%]">
-  <video
-    className="hero-reference-video absolute inset-0 z-0 block h-full w-full border-0 outline-none ring-0 object-cover opacity-100"
-    autoPlay
-    muted
-    loop
-    playsInline
-    aria-hidden="true"
-    poster="/brand/baltic-tech-logo.png"
-  >
-    <source src="/video-project-8.mp4" type="video/mp4" />
-  </video>
-
-  {/* Gradient overlay — no border */}
-  <div className="pointer-events-none absolute inset-0 z-10 bg-linear-to-t from-[#030612]/60 via-transparent to-blue-950/10 lg:bg-linear-to-r lg:from-[#030612] lg:via-[#030612]/20 lg:to-transparent" />
-</div>
-          <div className="relative mt-1 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4 lg:col-span-2 lg:mt-4 lg:max-w-6xl">
+          <div className="hero-chips">
             {[[ShieldCheck, 'Secure by Design'], [BrainCircuit, 'AI-Powered'], [Scaling, 'Scalable Architecture'], [Sparkles, 'Future-Ready']].map(([Icon, label]) => <span className="lens-target flex min-h-18 items-center gap-3 rounded-lg border border-blue-300/25 bg-[#071330]/75 px-3 py-3 text-[11px] font-semibold uppercase leading-tight tracking-[.08em] text-blue-50 backdrop-blur-md sm:px-4 sm:text-xs" key={label}><Icon className="shrink-0 text-blue-500" size={21} />{label}</span>)}
           </div>
         </div>
       </section>
+      <section className="section about" id="about"><div className="section-label">  ABOUT US</div><div className="about-grid"><h2>Powering the next generation of <em>crypto & AI technology.</em></h2><div><p>Baltic Tech Pvt. Ltd. is focused on developing innovative technology for the cryptocurrency, blockchain, and AI industries. We combine software engineering, blockchain development, and artificial intelligence to help businesses create reliable, scalable, and user-friendly digital solutions.</p><p>Our team works closely with every client, from the first idea to launch and beyond, so every product is practical, secure, intelligent, and ready for real users.</p></div></div><div className="vision-row"><div><span>OUR VISION</span><strong>To become a trusted technology partner in the global crypto, blockchain, and AI ecosystem.</strong></div><div><span>OUR MISSION</span><strong>To simplify complex technology and empower businesses through innovative, AI-driven digital solutions.</strong></div></div></section>
 
-      <section className="section company-products" id="company-products"><div className="section-label">02 / OUR COMPANY &amp; PRODUCTS</div><div className="section-intro"><h2>Innovation starts at <span>Baltic Tech.</span></h2><p>We build and develop digital products that shape the future of crypto, blockchain, and emerging technologies.</p></div><div className="company-ecosystem"><article className="company-node"><span className="company-node-label">PARENT COMPANY · PRODUCT DEVELOPMENT</span><img className="company-baltic-logo" src="/brand/baltic-tech-logo.png" alt="Baltic Tech Pvt. Ltd." /><h3>Baltic Tech Pvt. Ltd.</h3><p>Technology partner for crypto, blockchain &amp; AI.</p></article><div className="company-connector" aria-hidden="true"><span /><span /><span /></div><article className="company-node company-product"><span className="company-node-label">IN-HOUSE PRODUCT</span><img className="company-aurum-logo" src="/brand/aurum-crypto-logo.svg" alt="Aurum Crypto" /><h3>Aurum Crypto</h3><p>A product developed under Baltic Tech.</p></article><p className="company-caption">More products. One growing ecosystem.</p></div></section>
+      <section className="section company-products" id="company-products"><div className="section-label">  OUR COMPANY &amp; PRODUCTS</div><div className="section-intro"><h2>Innovation starts at <span>Baltic Tech.</span></h2><p>We build and develop digital products that shape the future of crypto, blockchain, and emerging technologies.</p></div><div className="company-ecosystem"><article className="company-node"><span className="company-node-label">PARENT COMPANY · PRODUCT DEVELOPMENT</span><img className="company-baltic-logo" src="/brand/baltic-tech-logo.png" alt="Baltic Tech Pvt. Ltd." /><h3>Baltic Tech Pvt. Ltd.</h3><p>Technology partner for crypto, blockchain &amp; AI.</p></article><div className="company-connector" aria-hidden="true"><span /><span /><span /></div><article className="company-node company-product"><span className="company-node-label">IN-HOUSE PRODUCT</span><img className="company-aurum-logo" src="/brand/aurum_logo.webp" alt="Aurum Crypto" /><h3>Aurum Crypto</h3><p>A product developed under Baltic Tech.</p></article><p className="company-caption">More products. One growing ecosystem.</p></div></section>
 
-      <section className="section services" id="services"><div className="section-label">03 / SERVICES</div><div className="section-intro"><h2>Complete crypto & AI <span>technology services.</span></h2><p>End-to-end technology services to build, launch, and grow crypto and AI-driven businesses. Every system is designed for security, scale, and the next stage of your ambition.</p></div><div className="service-grid">{services.map(([num, title, desc]) => <article className="service-card" key={num}><span className="card-number">{num}</span><h3>{title}</h3><p>{desc}</p><ArrowUpRight className="card-arrow" /></article>)}</div></section>
+      <section className="section services" id="services"><div className="section-label">  SERVICES</div><div className="section-intro"><h2>Complete crypto & AI <span>technology services.</span></h2><p>End-to-end technology services to build, launch, and grow crypto and AI-driven businesses. Every system is designed for security, scale, and the next stage of your ambition.</p></div><div className="service-grid">{services.map(([num, title, desc]) => <article className="service-card" key={num}><span className="card-number">{num}</span><h3>{title}</h3><p>{desc}</p><ArrowUpRight className="card-arrow" /></article>)}</div></section>
 
-      <section className="blue-band" id="solutions"><div className="section-label">04 / SOLUTIONS</div><div className="band-content"><h2>Technology for <em>every stage</em> of your business.</h2><p>From startups to established enterprises, every project is shaped around your goals, your users, and your growth plans.</p></div><div className="solution-grid">{solutions.map(([num, title, desc]) => <div className="solution-card" key={num}><span>{num}</span><h3>{title}</h3><p>{desc}</p></div>)}</div></section>
+      <section className="blue-band" id="solutions"><div className="section-label">  SOLUTIONS</div><div className="band-content"><h2>Technology for <em>every stage</em> of your business.</h2><p>From startups to established enterprises, every project is shaped around your goals, your users, and your growth plans.</p></div><div className="solution-grid">{solutions.map(([num, title, desc]) => <div className="solution-card" key={num}><span>{num}</span><h3>{title}</h3><p>{desc}</p></div>)}</div></section>
 
-      <section className="section future"><div className="section-label">05 / AI & FUTURE TECH</div><div className="section-intro"><h2>Building intelligent technology for <span>what comes next.</span></h2><p>We combine artificial intelligence, blockchain, and Web3 to create smart, automated, and secure digital products that stay ahead of the market.</p></div><div className="pill-row">{['AI Agents', 'Machine Learning', 'Predictive Analytics', 'Automation', 'AI + Blockchain'].map((pill) => <span key={pill}>{pill}</span>)}</div></section>
+      <section className="section future"><div className="section-label">  AI & FUTURE TECH</div><div className="section-intro"><h2>Building intelligent technology for <span>what comes next.</span></h2><p>We combine artificial intelligence, blockchain, and Web3 to create smart, automated, and secure digital products that stay ahead of the market.</p></div><div className="pill-row">{['AI Agents', 'Machine Learning', 'Predictive Analytics', 'Automation', 'AI + Blockchain'].map((pill) => <span key={pill}>{pill}</span>)}</div></section>
 
-      <section className="section about" id="about"><div className="section-label">06 / ABOUT US</div><div className="about-grid"><h2>Powering the next generation of <em>crypto & AI technology.</em></h2><div><p>Baltic Tech Pvt. Ltd. is focused on developing innovative technology for the cryptocurrency, blockchain, and AI industries. We combine software engineering, blockchain development, and artificial intelligence to help businesses create reliable, scalable, and user-friendly digital solutions.</p><p>Our team works closely with every client, from the first idea to launch and beyond, so every product is practical, secure, intelligent, and ready for real users.</p></div></div><div className="vision-row"><div><span>OUR VISION</span><strong>To become a trusted technology partner in the global crypto, blockchain, and AI ecosystem.</strong></div><div><span>OUR MISSION</span><strong>To simplify complex technology and empower businesses through innovative, AI-driven digital solutions.</strong></div></div></section>
+ 
+      <section className="section faq" id="faq"><div className="section-label">  FAQ</div><div className="faq-layout"><h2>Questions, <em>answered.</em></h2><div>{faqs.map(([q, a], i) => <div className={`faq-item ${openFaq === i ? 'open' : ''}`} key={q}><button onClick={() => setOpenFaq(openFaq === i ? null : i)}><span>{q}</span><ChevronDown /></button>{openFaq === i && <p>{a}</p>}</div>)}</div></div></section>
 
-      <section className="section faq" id="faq"><div className="section-label">07 / FAQ</div><div className="faq-layout"><h2>Questions, <em>answered.</em></h2><div>{faqs.map(([q, a], i) => <div className={`faq-item ${openFaq === i ? 'open' : ''}`} key={q}><button onClick={() => setOpenFaq(openFaq === i ? null : i)}><span>{q}</span><ChevronDown /></button>{openFaq === i && <p>{a}</p>}</div>)}</div></div></section>
-
-      <section className="contact" id="contact"><div className="section-label">08 / CONTACT US</div><div className="contact-grid"><div><h2>Let&apos;s build your next <em>big idea.</em></h2><p>Have a crypto, blockchain, or AI project in mind? Connect with our team to explore the right solution.</p><div className="steps"><div><b>01</b><span>Share your idea</span></div><div><b>02</b><span>We plan & propose</span></div><div><b>03</b><span>Build & launch</span></div></div></div><form onSubmit={async (e) => {
+      <section className="contact" id="contact"><div className="section-label">  CONTACT US</div><div className="contact-grid"><div><h2>Let&apos;s build your next <em>big idea.</em></h2><p>Have a crypto, blockchain, or AI project in mind? Connect with our team to explore the right solution.</p><div className="steps"><div><b>01</b><span>Share your idea</span></div><div><b>02</b><span>We plan & propose</span></div><div><b>03</b><span>Build & launch</span></div></div></div><form onSubmit={async (e) => {
         e.preventDefault()
         setContactError('')
         setIsSending(true)
@@ -143,7 +106,7 @@ export default function Page() {
         }
       }} className="contact-form">{sent ? <div className="success"><span>✓</span><h3>Thanks — we&apos;ll be in touch.</h3><p>Your idea is on its way to the Baltic Tech team.</p></div> : <><label className="honeypot" aria-hidden="true">Website<input name="website" tabIndex="-1" autoComplete="off" /></label><label>Full name<input name="name" required maxLength="100" placeholder="Enter full name" /></label><label>Business email<input name="email" required maxLength="160" type="email" placeholder="Enter business email" /></label><label>Company name<input name="company" maxLength="120" placeholder="Enter company name" /></label><label>Project details<textarea name="message" required maxLength="4000" placeholder="Tell us about your project…" rows={4} /></label><button className="submit-btn" type="submit" disabled={isSending}>{isSending ? 'Sending…' : 'Send enquiry'} {!isSending && <ArrowUpRight size={17} />}</button>{contactError && <p className="form-error" role="alert">{contactError}</p>}</>}</form></div></section>
 
-      <section className="get-started" id="get-started"><div className="section-label">09 / GET STARTED</div><div className="get-started-content"><div> <h2>Your Crypto &amp; AI Vision <em>Starts Here</em></h2></div><div><p>Partner with Baltic Tech to build, launch, and scale your next crypto, blockchain, or AI project. Tell us your idea and our team will help turn it into a secure, intelligent, market-ready product.</p><div className="get-started-actions"><a className="button button-primary" href="#contact">Start Your Project <ArrowUpRight size={17} /></a><a className="button button-ghost" href="#contact">Talk to Our Team <ArrowUpRight size={17} /></a></div></div></div></section>
+      <section className="get-started" id="get-started"><div className="section-label">  GET STARTED</div><div className="get-started-content"><div> <h2>Your Crypto &amp; AI Vision <em>Starts Here</em></h2></div><div><p>Partner with Baltic Tech to build, launch, and scale your next crypto, blockchain, or AI project. Tell us your idea and our team will help turn it into a secure, intelligent, market-ready product.</p><div className="get-started-actions"><a className="button button-primary" href="#contact">Start Your Project <ArrowUpRight size={17} /></a><a className="button button-ghost" href="#contact">Talk to Our Team <ArrowUpRight size={17} /></a></div></div></div></section>
 
       <footer className="footer"><video className="footer-video" autoPlay muted loop playsInline aria-hidden="true"><source src="/video-project-10.mp4" type="video/mp4" /></video><div className="footer-top"><div><img src="/brand/baltic-tech-logo.png" alt="Baltic Tech" width="210" height="54" /><p>Building the technology behind the future of crypto & AI.</p></div><div className="footer-links"><div><span>EXPLORE</span><a href="#services">Services</a><a href="#solutions">Solutions</a><a href="#about">About us</a><a href="#faq">FAQ</a></div><div><span>CONNECT</span><a href="#contact">Start a project</a><a href="#contact">LinkedIn</a><a href="#contact">X / Twitter</a><a href="#contact">GitHub</a></div></div></div><div className="footer-bottom"><span>© 2026 Baltic Tech Pvt. Ltd. All rights reserved.</span><span>Privacy policy &nbsp; / &nbsp; Terms</span><span>Designed with intent.</span></div></footer>
     </main>
