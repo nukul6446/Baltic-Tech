@@ -89,6 +89,7 @@ body {
 .hero-particles {
 	opacity: .7;
 	mix-blend-mode: screen;
+	pointer-events: none;
 }
 
 .particles-canvas {

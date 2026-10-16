@@ -48,7 +48,7 @@ export default function Page() {
 
       <section className="hero-reference relative isolate min-h-190 overflow-hidden bg-[#030612] px-6 pb-14 pt-36 text-white sm:px-10 lg:min-h-svh lg:px-16 lg:py-32" id="top">
         <div className="hero-reference-glow pointer-events-none absolute -right-32 top-24 -z-10 h-135 w-135 rounded-full bg-blue-600/35 blur-[90px] sm:right-0 lg:h-175 lg:w-175" />
-        <div className="hero-particles pointer-events-auto absolute inset-0 z-0" aria-hidden="true">
+        <div className="hero-particles pointer-events-none absolute inset-0 z-0" aria-hidden="true">
           <Particles
             particleColors={['#ffffff', '#ffffff', '#ffffff']}
             particleCount={200}
@@ -86,7 +86,7 @@ export default function Page() {
           </div>
          <div className="hero-reference-visual relative order-last min-h-72 overflow-hidden border-0 outline-none ring-0 lg:absolute lg:inset-y-0 lg:right-[-8%] lg:z-0 lg:min-h-0 lg:w-[56%]">
   <video
-    className="hero-reference-video absolute inset-0 z-0 block h-full w-full border-0 outline-none ring-0 object-cover opacity-90"
+    className="hero-reference-video absolute inset-0 z-0 block h-full w-full border-0 outline-none ring-0 object-cover opacity-100"
     autoPlay
     muted
     loop

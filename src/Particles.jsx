@@ -74,9 +74,10 @@ export default function Particles({
 
     const handlePointerMove = (event) => {
       const bounds = canvas.getBoundingClientRect()
+      const inside = event.clientX >= bounds.left && event.clientX <= bounds.right && event.clientY >= bounds.top && event.clientY <= bounds.bottom
       pointer.x = event.clientX - bounds.left
       pointer.y = event.clientY - bounds.top
-      pointer.active = true
+      pointer.active = inside
     }
 
     const handlePointerLeave = () => { pointer.active = false }
@@ -90,8 +91,10 @@ export default function Particles({
       const distanceY = pointer.y - particle.y
       const distance = Math.hypot(distanceX, distanceY)
       const hoverStrength = moveParticlesOnHover && pointer.active && distance < hoverRadius ? (1 - distance / hoverRadius) * particleHoverFactor : 0
-      const parallaxX = hoverEffect === 'parallax' ? -distanceX * hoverStrength * .018 : 0
-      const parallaxY = hoverEffect === 'parallax' ? -distanceY * hoverStrength * .018 : 0
+      const fieldOffsetX = pointer.active ? -((pointer.x - width / 2) / width) * 30 * particleHoverFactor * particle.depth : 0
+      const fieldOffsetY = pointer.active ? -((pointer.y - height / 2) / height) * 22 * particleHoverFactor * particle.depth : 0
+      const parallaxX = hoverEffect === 'parallax' ? fieldOffsetX : distanceX * hoverStrength * (hoverEffect === 'attract' ? .018 : -.018)
+      const parallaxY = hoverEffect === 'parallax' ? fieldOffsetY : distanceY * hoverStrength * (hoverEffect === 'attract' ? .018 : -.018)
       const twinkleAmount = twinkle ? 1 - twinkle * .35 + Math.sin(time * .002 + particle.phase) * twinkle * .35 : 1
       const radius = Math.max(.7, particle.size * (1 + hoverStrength) * twinkleAmount * particle.depth)
       const x = particle.x + parallaxX
@@ -162,17 +165,17 @@ export default function Particles({
     resize()
     const observer = new ResizeObserver(resize)
     observer.observe(parent)
-    canvas.addEventListener('pointermove', handlePointerMove)
-    canvas.addEventListener('pointerleave', handlePointerLeave)
-    canvas.addEventListener('click', handleClick)
+    window.addEventListener('pointermove', handlePointerMove)
+    window.addEventListener('blur', handlePointerLeave)
+    window.addEventListener('click', handleClick)
     animationFrame = requestAnimationFrame(render)
 
     return () => {
       cancelAnimationFrame(animationFrame)
       observer.disconnect()
-      canvas.removeEventListener('pointermove', handlePointerMove)
-      canvas.removeEventListener('pointerleave', handlePointerLeave)
-      canvas.removeEventListener('click', handleClick)
+      window.removeEventListener('pointermove', handlePointerMove)
+      window.removeEventListener('blur', handlePointerLeave)
+      window.removeEventListener('click', handleClick)
     }
   }, [alphaParticles, cameraDistance, clickBurst, connectionDistance, connections, disableRotation, drift, driftSpeed, glow, hoverEffect, hoverRadius, intro, lightMode, opacity, particleBaseSize, particleColors, particleCount, particleHoverFactor, particleSpread, shape, sizeRandomness, speed, twinkle, variation, moveParticlesOnHover])
 
