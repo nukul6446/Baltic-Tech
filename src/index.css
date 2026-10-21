@@ -1765,7 +1765,7 @@ h2 em {
 @media (min-width: 1024px) {
   .hero-reference {
     min-height: 0;
-    padding: 112px 64px 72px;
+    padding: 112px 64px 24px;
   }
 
   .hero-inner {
