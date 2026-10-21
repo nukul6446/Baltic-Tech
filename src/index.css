@@ -268,15 +268,9 @@
 
 /* ---------- 5. Hero ---------- */
 .hero-reference {
-  position: relative;
-  isolation: isolate;
-  min-height: 760px;
-  overflow: hidden;
-  padding: 144px 24px 56px;
-  background: var(--navy-deep);
-  color: #fff;
+  min-height: 680px;
+  padding: 120px 24px 44px;
 }
-
 /* layered backdrop: image → video → glow orbs → vignette → grid */
 .hero-reference-fallback {
   position: absolute;
@@ -377,7 +371,7 @@
   position: relative;
   z-index: 10;
   display: grid;
-  gap: 48px;
+  gap: 38px;
   align-items: center;
   width: 100%;
   max-width: 1600px;
@@ -443,7 +437,7 @@
 
 .hero-sub {
   max-width: 32rem;
-  margin: 40px auto 0;
+  margin: 34px auto 0;
 }
 
 .hero-sub p {
@@ -646,14 +640,14 @@ html.reveal-all [data-reveal] {
 .contact,
 .get-started {
   position: relative;
-  padding: clamp(84px, 10vw, 125px) clamp(22px, 9vw, 138px);
+  padding: clamp(72px, 8vw, 104px) clamp(22px, 8vw, 120px);
 }
 
 .section-label {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: clamp(36px, 5vw, 60px);
+  margin-bottom: clamp(28px, 4vw, 46px);
   color: var(--primary);
   font-size: 11px;
   font-weight: 700;
@@ -672,9 +666,9 @@ html.reveal-all [data-reveal] {
 .section-intro {
   display: grid;
   grid-template-columns: 1.25fr .75fr;
-  gap: clamp(32px, 5vw, 70px);
+  gap: clamp(28px, 4vw, 56px);
   align-items: end;
-  margin-bottom: clamp(40px, 6vw, 70px);
+  margin-bottom: clamp(32px, 5vw, 54px);
 }
 
 .section h2,
@@ -752,8 +746,8 @@ h2 em {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(32px, 6vw, 100px);
-  margin-top: clamp(56px, 8vw, 100px);
-  padding-top: 34px;
+  margin-top: clamp(42px, 6vw, 72px);
+  padding-top: 28px;
   border-top: 1px solid var(--line);
 }
 
@@ -1016,7 +1010,7 @@ h2 em {
 .blue-band {
   position: relative;
   overflow: hidden;
-  padding: clamp(84px, 10vw, 120px) clamp(22px, 9vw, 138px);
+  padding: clamp(72px, 8vw, 104px) clamp(22px, 8vw, 120px);
   color: #fff;
   background: linear-gradient(135deg, #145cff, #0d3ead);
   background-size: 180% 180%;
@@ -1058,9 +1052,9 @@ h2 em {
 .band-content {
   display: grid;
   grid-template-columns: 1.25fr .75fr;
-  gap: clamp(32px, 5vw, 70px);
+  gap: clamp(28px, 4vw, 56px);
   align-items: end;
-  margin: clamp(48px, 7vw, 80px) 0;
+  margin: clamp(36px, 5vw, 60px) 0;
 }
 
 .band-content h2 {
@@ -1158,7 +1152,7 @@ h2 em {
 .faq-layout {
   display: grid;
   grid-template-columns: .7fr 1.3fr;
-  gap: clamp(40px, 7vw, 100px);
+  gap: clamp(32px, 6vw, 76px);
   align-items: start;
 }
 
@@ -1300,7 +1294,7 @@ h2 em {
   z-index: 1;
   display: grid;
   grid-template-columns: 1fr .9fr;
-  gap: clamp(44px, 7vw, 100px);
+  gap: clamp(36px, 6vw, 76px);
   align-items: start;
 }
 
@@ -1315,7 +1309,7 @@ h2 em {
 .steps {
   display: flex;
   gap: 30px;
-  margin-top: clamp(44px, 6vw, 70px);
+  margin-top: clamp(36px, 5vw, 56px);
 }
 
 .steps > div {
@@ -1375,7 +1369,7 @@ h2 em {
   z-index: 1;
   display: grid;
   grid-template-columns: 1.05fr .95fr;
-  gap: clamp(40px, 7vw, 100px);
+  gap: clamp(36px, 6vw, 76px);
   align-items: end;
 }
 
@@ -1406,7 +1400,7 @@ h2 em {
 .footer {
   position: relative;
   overflow: hidden;
-  padding: clamp(70px, 8vw, 90px) clamp(22px, 9vw, 138px) 22px;
+  padding: clamp(56px, 6vw, 72px) clamp(22px, 8vw, 120px) 22px;
   color: #fff;
   background: #08091a;
 }
@@ -1452,7 +1446,7 @@ h2 em {
   display: flex;
   justify-content: space-between;
   gap: 50px;
-  padding-bottom: clamp(50px, 7vw, 80px);
+  padding-bottom: clamp(38px, 5vw, 58px);
 }
 
 .footer img {
@@ -1731,7 +1725,7 @@ h2 em {
 
 @media (max-width: 1023px) {
   .hero-reference {
-    padding: 130px 24px 56px;
+    padding: 118px 24px 48px;
   }
 
   .hero-chips {
@@ -1750,7 +1744,7 @@ h2 em {
   }
 
   .hero-sub {
-    margin-top: 48px;
+    margin-top: 40px;
   }
 
   .hero-sub p {
@@ -1771,12 +1765,12 @@ h2 em {
 @media (min-width: 1024px) {
   .hero-reference {
     min-height: 100svh;
-    padding: 128px 64px;
+    padding: 112px 64px;
   }
 
   .hero-inner {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 30px;
   }
 
   .hero-chips {
@@ -1817,7 +1811,7 @@ h2 em {
   .vision-row {
     grid-template-columns: 1fr;
     gap: 18px;
-    margin-top: 56px;
+    margin-top: 42px;
   }
 
   .vision-row strong {
@@ -1826,7 +1820,7 @@ h2 em {
 
   .steps {
     gap: 22px;
-    margin-top: 40px;
+    margin-top: 34px;
   }
 
   .get-started h2 {
