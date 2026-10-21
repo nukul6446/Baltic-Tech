@@ -268,8 +268,8 @@
 
 /* ---------- 5. Hero ---------- */
 .hero-reference {
-  min-height: 680px;
-  padding: 120px 24px 44px;
+  min-height: 0;
+  padding: 120px 24px 32px;
 }
 /* layered backdrop: image → video → glow orbs → vignette → grid */
 .hero-reference-fallback {
@@ -1725,7 +1725,7 @@ h2 em {
 
 @media (max-width: 1023px) {
   .hero-reference {
-    padding: 118px 24px 48px;
+    padding: 118px 24px 32px;
   }
 
   .hero-chips {
@@ -1764,8 +1764,8 @@ h2 em {
 
 @media (min-width: 1024px) {
   .hero-reference {
-    min-height: 100svh;
-    padding: 112px 64px;
+    min-height: 0;
+    padding: 112px 64px 72px;
   }
 
   .hero-inner {
@@ -1864,7 +1864,7 @@ h2 em {
 
 @media (max-width: 640px) {
   .hero-reference {
-    padding: 118px 20px 48px;
+    padding: 118px 20px 32px;
   }
 
   .hero-reference-title {
